@@ -1,0 +1,102 @@
+.login {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img img {
+  width: 500px;
+}
+
+h1 {
+  width: 486px;
+  height: 80px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 80px;
+  color: #C3C8D4;
+  margin: 40px 0px;
+}
+
+.mail,
+.pass {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 370px;
+  height: 30px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  color: #475069;
+}
+
+.input-email,
+.input-pass {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  width: 480px;
+  border: 1px solid #323b54;
+  border-radius: 12px;
+}
+
+.input-email img,
+.input-pass img {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 24px;
+  height: 24px;
+  margin: 0px 16px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  width: 486px;
+  background: #7B6EF6;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #211e41;
+}
+
+.mail {
+  background-color: transparent;
+}
+
+.rectangle {
+  width: 215px;
+}
+
+h2 {
+  color: #C3C8D4;
+}
+
+.google{
+  background-color: transparent;
+  border: none;
+}
+
+h6 {
+  color: #A8AEBF;
+}
+
+h6 a {
+  text-decoration: none;
+}

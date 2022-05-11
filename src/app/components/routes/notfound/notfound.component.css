@@ -1,0 +1,37 @@
+.mensaje {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 500px;
+  height: 420px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #EBEEF5;
+}
+
+p {
+  font-size: 16px;
+  color: #8E95A9;
+}
+
+.home {
+  padding: 16px 32px;
+  width: 139px;
+  background: #7B6EF6;
+  border-radius: 12px;
+}
+
+.home:hover {
+  background: #2c2757;
+}
+
+a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #FFFFFF;
+}

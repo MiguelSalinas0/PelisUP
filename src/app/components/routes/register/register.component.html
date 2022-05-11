@@ -1,0 +1,33 @@
+<div class="login container pt-5 pb-5">
+  <div class="img pt-4 pb-4">
+    <img src="assets/login.png" alt="" />
+  </div>
+  <div>
+    <h1>Registrar</h1>
+    <form (ngSubmit)="Registrar()" autocomplete="off" [formGroup]="miFormulario">
+      <div>
+        <div class="input-email">
+          <img src="assets/Left Icon mail.png" alt="" />
+          <input class="mail form-control" type="email" name="email" placeholder="Email" formControlName="email" />
+          <span class="form-text text-danger" *ngIf="campoEsValido('email')">
+            No es un email válido
+          </span>
+        </div>
+      </div>
+      <div class="pt-4">
+        <div class="input-pass">
+          <img src="assets/Left Icon pass.png" alt="" />
+          <input class="pass form-control" type="password" name="password" placeholder="Contraseña"
+            formControlName="password" />
+          <span class="form-text text-danger" *ngIf="campoEsValido('password')">
+            Mínimo 6 caracteres
+          </span>
+        </div>
+      </div>
+      <div class="pt-5 d-grid gap-2">
+        <button class="btn" type="submit" [disabled]="miFormulario.invalid">Registrar</button>
+      </div>
+    </form>
+    <h6 class="pt-4">¿Tienes cuenta? <a [routerLink]="['../Ingresar']">Ingresar</a></h6>
+  </div>
+</div>

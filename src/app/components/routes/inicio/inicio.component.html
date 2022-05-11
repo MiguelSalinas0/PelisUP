@@ -1,0 +1,53 @@
+<section class="Titulo">
+  <div class="container">
+    <h1>PelisUP!</h1>
+    <p class="subtitulo">Plataforma para ver Películas y series 😉</p>
+  </div>
+</section>
+
+<section class="buscador">
+  <div class="busqueda">
+    <img class="lupa" src="assets/lupa.png" alt="">
+    <input class="search" name="toSearch" spellcheck="false" type="search" placeholder="Buscar películas y series"
+      [(ngModel)]="toSearch" (ngModelChange)="Search()">
+  </div>
+</section>
+
+<section class="section-menu">
+  <div class="opciones d-flex justify-content-between">
+    <button class="btn text-white" (click)="filter = 'todos'"
+      [ngClass]="filter == 'todos' ? 'active' : '' ">Todos</button>
+    <button class="btn text-white" (click)="filter = 'movie'"
+      [ngClass]="filter == 'movie' ? 'active' : '' ">Películas</button>
+    <button class="btn text-white" (click)="filter = 'tv'" [ngClass]="filter == 'tv' ? 'active' : '' ">Series</button>
+  </div>
+</section>
+
+<div *ngIf="filter == 'movie'">
+  <h2>Películas <small>({{count()}})</small></h2>
+</div>
+<div *ngIf="filter == 'todos' || '' == filter ">
+  <h2>Todos <small>({{count()}})</small></h2>
+</div>
+<div *ngIf="filter == 'tv'">
+  <h2>Series <small>({{count()}})</small></h2>
+</div>
+
+<div class="portadas container d-flex">
+  <div *ngFor="let prog of movies">
+    <div *ngIf="'' == filter || 'todos' == filter">
+      <div *ngIf="prog.media_type == 'movie'">
+        <a [routerLink]="['../Vistas', prog.id, prog.media_type]"><app-card [name]="prog.title" [image]="prog.poster_path" [rating]="prog.vote_average"></app-card></a>
+      </div>
+      <div *ngIf="prog.media_type == 'tv'">
+        <a [routerLink]="['../Vistas', prog.id, prog.media_type]"><app-card [name]="prog.name" [image]="prog.poster_path" [rating]="prog.vote_average"></app-card></a>
+      </div>
+    </div>
+    <div *ngIf="filter == 'movie'">
+      <a [routerLink]="['../Vistas', prog.id, prog.media_type]"><app-card *ngIf="'movie' == prog.media_type" [name]="prog.title" [image]="prog.poster_path"[rating]="prog.vote_average"></app-card></a>
+    </div>
+    <div *ngIf="filter == 'tv'">
+      <a [routerLink]="['../Vistas', prog.id, prog.media_type]"><app-card *ngIf="'tv' == prog.media_type" [name]="prog.name" [image]="prog.poster_path" [rating]="prog.vote_average"></app-card></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="header container-fluid d-flex align-items-center justify-content-between">
+
+  <a routerLink="Inicio" href="">
+    <img class="logo" src="assets/logo.png" alt="Logo"/>
+  </a>
+
+  <ul class="nav justify-content-end" *ngIf="userLogged | async as user; else logout">
+    <li class="nav-item">
+      <a routerLink="home" routerLinkActive="active">Mi lista</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="Agregar" routerLinkActive="active">Agregar</a>
+    </li>
+    <li class="nav-item"><a routerLink="Inicio" (click)="logOut()">← Salir</a></li>
+  </ul>
+
+  <ng-template #logout>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a routerLink="Peliculas" routerLinkActive="active">Películas</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="Series" routerLinkActive="active">Series</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="Ingresar" routerLinkActive="active">Ingresar →</a>
+      </li>
+    </ul>
+  </ng-template>
+</div>

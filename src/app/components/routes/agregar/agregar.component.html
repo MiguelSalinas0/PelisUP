@@ -1,0 +1,19 @@
+<h1>Agregar nuevo item</h1>
+
+<section class="buscador">
+    <div class="busqueda">
+        <img class="lupa" src="assets/lupa.png" alt="">
+        <input class="search" name="toSearch" spellcheck="false" type="search" placeholder="Buscar películas y series"
+        [(ngModel)]="toSearch" (ngModelChange)="Search()">
+    </div>
+</section>
+
+<div class="portadas container d-flex">
+    <div *ngFor="let prog of movies">
+        <a [routerLink]="['../Vistas', prog.id, prog.media_type]"><app-card *ngIf="'movie' == prog.media_type" [name]="prog.title" [image]="prog.poster_path" [rating]="prog.vote_average"></app-card></a>
+        <a [routerLink]="['../Vistas', prog.id, prog.media_type]"><app-card *ngIf="'tv' == prog.media_type" [name]="prog.name" [image]="prog.poster_path" [rating]="prog.vote_average"></app-card></a>
+        <div class="pb-5">
+            <button class="agregar" (click)="addList(prog)">+ Agregar a mi lista</button>
+        </div>
+    </div>
+</div>

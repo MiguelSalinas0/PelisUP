@@ -1,0 +1,19 @@
+<h5>PelisUP!</h5>
+
+<h1>Películas</h1>
+
+<section class="buscador">
+  <div class="busqueda">
+    <img class="lupa" src="assets/lupa.png" alt="">
+    <input class="search" type="search" placeholder="Buscar películas" [(ngModel)]="toSearch"
+      (ngModelChange)="Search()">
+  </div>
+</section>
+
+<h2>Películas <small>({{count()}})</small></h2>
+
+<div class="portadas container d-flex">
+  <div *ngFor="let prog of pelis">
+    <a [routerLink]="['../Vistas', prog.id, 'movie']"><app-card [name]="prog.title" [image]="prog.poster_path" [rating]="prog.vote_average"></app-card></a>
+  </div>
+</div>

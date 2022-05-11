@@ -1,0 +1,67 @@
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 40px;
+}
+
+.titulo {
+  padding: 40px;
+  position: absolute;
+  width: 560px;
+  left: 20%;
+  top: 750px;
+  background: rgba(32, 40, 62, 0.8);
+  border-radius: 24px;
+}
+
+.titulo h1 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 32px;
+  color: #EBEEF5;
+  margin: 8px 0px;
+}
+
+.seccion-data {
+  padding-top: 200px;
+}
+
+.poster {
+  width: 480px;
+  height: 720px;
+  left: 200px;
+  top: 752px;
+  border-radius: 24px;
+}
+
+.detalles h4 {
+  color: #767E94;
+}
+
+.detalles h2 {
+  color: #EBEEF5;
+}
+
+.detalles p {
+  color: #C3C8D4;
+}
+
+.puntuacion {
+  padding: 4px 8px;
+  width: 60px;
+  height: 40px;
+  left: 16px;
+  top: 18px;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 8px;
+  color: #ffad49;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.puntuacion img {
+  font-size: 20px;
+  margin-right: 5px;
+}

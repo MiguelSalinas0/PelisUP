@@ -1,0 +1,35 @@
+.header {
+  color: #a8aebf;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 16px 120px;
+  height: 80px;
+  background: rgba(18, 24, 41, 0.8);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.header ul a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #a8aebf;
+  margin: 0px 25px;
+}
+
+.header ul a:hover {
+  color: #ffffff;
+}
+
+.active {
+  background-color: rgb(33, 33, 177);
+  border-radius: 8px;
+  padding: 3px;
+}

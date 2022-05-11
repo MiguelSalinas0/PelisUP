@@ -1,0 +1,56 @@
+<div class="login container pt-5 pb-5">
+  <div class="img pt-4 pb-4">
+    <img src="assets/login.png" alt="" />
+  </div>
+  <div>
+    <h1>Ingresar</h1>
+    <form (ngSubmit)="Ingresar()" autocomplete="off" [formGroup]="miFormulario">
+      <div>
+        <div class="input-email">
+          <img src="assets/Left Icon mail.png" alt="" />
+          <input
+            class="mail form-control"
+            type="email"
+            name="email"
+            placeholder="Email"
+            formControlName="email"
+          />
+          <span class="form-text text-danger" *ngIf="campoEsValido('email')">
+            No es un email válido
+          </span>
+        </div>
+      </div>
+      <div class="pt-4">
+        <div class="input-pass">
+          <img src="assets/Left Icon pass.png" alt="" />
+          <input
+            class="pass form-control"
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            formControlName="password"
+          />
+          <span class="form-text text-danger" *ngIf="campoEsValido('password')">
+            Mínimo 6 caracteres
+          </span>
+        </div>
+      </div>
+      <div class="pt-5 d-grid gap-2">
+        <button class="btn" type="submit" [disabled]="miFormulario.invalid">Ingresar</button>
+      </div>
+    </form>
+    <h6 class="pt-4">¿No tienes cuenta? <a [routerLink]="['../Register']">Registrar</a></h6>
+    <div class="contenedor-google d-flex pt-3 justify-content-around align-items-center">
+      <div>
+        <img class="rectangle" src="assets/Rectangle 1071.png" alt="rectangle"/>
+      </div>
+      <h2>ó</h2>
+      <div>
+        <img class="rectangle" src="assets/Rectangle 1071.png" alt="rectangle"/>
+      </div>
+    </div>
+    <div class="pt-3 d-flex justify-content-center">
+      <button (click)="IngresarConGoogle()" class="google"><img src="assets/login_google.png" alt="Google" /></button>
+    </div>
+  </div>
+</div>
