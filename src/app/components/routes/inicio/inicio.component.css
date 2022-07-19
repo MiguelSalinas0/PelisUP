@@ -52,7 +52,7 @@ h1 {
   height: 24px;
   left: 16px;
   top: 20px;
-  margin: 0px 16px;
+  margin-right: 8px;
 }
 
 input[type="search"] {
@@ -121,4 +121,13 @@ input[type="search"] {
 
 .active {
   background-color: #7b6ef6;
+}
+
+@media only screen and (max-width: 900px) {
+  .busqueda {
+    width: 275px;
+  }
+  .opciones {
+    width: 300px;
+  }
 }

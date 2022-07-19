@@ -1,5 +1,5 @@
 .portadas {
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -79,4 +79,13 @@ input[type="search"] {
   padding-left: 10%;
   padding-top: 48px;
   padding-bottom: 80px;
+}
+
+@media only screen and (max-width: 900px) {
+  .busqueda {
+    width: 275px;
+  }
+  .opciones {
+    width: 300px;
+  }
 }

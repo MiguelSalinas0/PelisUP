@@ -1,19 +1,13 @@
 <div *ngIf="media == 'movie'">
   <div class="portada container pt-3">
-    <img
-      src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}"
-      alt="portada"
-    />
+    <img src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}" alt="portada" />
   </div>
   <div class="titulo">
     <h1>{{ movie.title }}</h1>
   </div>
   <div class="container seccion-data d-flex justify-content-around">
     <div class="poster col-sm-5">
-      <img
-        src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}"
-        alt="poster"
-      />
+      <img src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}" alt="poster" />
     </div>
     <div class="detalles col-sm-5">
       <h2 class="pt-1">{{ movie.tagline }}</h2>
@@ -40,20 +34,14 @@
 
 <div *ngIf="media == 'tv'">
   <div class="portada container pt-3">
-    <img
-      src="https://image.tmdb.org/t/p/original/{{ serie.backdrop_path }}"
-      alt="portada"
-    />
+    <img src="https://image.tmdb.org/t/p/original/{{ serie.backdrop_path }}" alt="portada" />
   </div>
   <div class="titulo">
     <h1>{{ serie.name }}</h1>
   </div>
   <div class="container seccion-data d-flex justify-content-around">
     <div class="poster col-sm-5">
-      <img
-        src="https://image.tmdb.org/t/p/original/{{ serie.poster_path }}"
-        alt="poster"
-      />
+      <img src="https://image.tmdb.org/t/p/original/{{ serie.poster_path }}" alt="poster" />
     </div>
     <div class="detalles col-sm-5">
       <h2 class="pt-1">{{ serie.tagline }}</h2>
