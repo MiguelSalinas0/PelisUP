@@ -102,11 +102,13 @@ h6 a {
 }
 
 @media only screen and (max-width: 900px) {
+  h1 {
+    width: 300px;
+  }
   .img {
     display: none;
   }
   .login {
-    padding-left: 40%;
     flex-direction: column;
     justify-content: center;
   }

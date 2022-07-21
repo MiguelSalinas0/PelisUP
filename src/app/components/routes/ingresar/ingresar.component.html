@@ -2,7 +2,7 @@
   <div class="img pt-4 pb-4">
     <img src="assets/login.png" alt="" />
   </div>
-  <div>
+  <div class="contenedor-elementos">
     <h1>Ingresar</h1>
     <form class="formulario" (ngSubmit)="Ingresar()" autocomplete="off" [formGroup]="miFormulario">
       <div>
@@ -38,7 +38,7 @@
         <img class="rectangle" src="assets/Rectangle 1071.png" alt="rectangle" />
       </div>
     </div>
-    <div class="pt-3 d-flex btn-google">
+    <div class="pt-3 d-flex justify-content-center">
       <button (click)="IngresarConGoogle()" class="google"><img src="assets/login_google.png" alt="Google" /></button>
     </div>
   </div>

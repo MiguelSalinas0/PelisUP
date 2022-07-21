@@ -92,10 +92,6 @@ h2 {
   justify-content: space-around;
 }
 
-.btn-google {
-  justify-content: center;
-}
-
 h6 {
   color: #a8aebf;
 }
@@ -105,11 +101,13 @@ h6 a {
 }
 
 @media only screen and (max-width: 900px) {
+  h1 {
+    width: 300px;
+  }
   .img {
     display: none;
   }
   .login {
-    padding-left: 40%;
     flex-direction: column;
     justify-content: center;
   }
@@ -126,8 +124,5 @@ h6 a {
   }
   .rectangle {
     width: 100px;
-  }
-  .btn-google {
-    justify-content: start;
   }
 }
