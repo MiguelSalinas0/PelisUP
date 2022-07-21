@@ -5,3 +5,10 @@ h1 {
   padding-top: 100px;
   font-family: 'Poppins';
 }
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 55px;
+    padding-left: 8%;
+  }
+}

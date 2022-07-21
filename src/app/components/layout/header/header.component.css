@@ -40,10 +40,10 @@
   display: block;
   width: 35px;
   height: 2px;
-  background-color: #F8ECD1;
+  background-color: #f8ecd1;
   margin-block: 10px;
   border-radius: 4px;
-  transition: transform .5s, opacity .25s;
+  transition: transform 0.5s, opacity 0.25s;
 }
 
 .navbar-toggler:focus,
@@ -51,7 +51,7 @@
   color: transparent;
 }
 
-.navbar-collapse ul{
+.navbar-collapse ul {
   padding-left: 70%;
 }
 
@@ -62,7 +62,7 @@
   .nav-item {
     padding-top: 10px;
   }
-  .navbar-collapse ul{
+  .navbar-collapse ul {
     padding-left: 1%;
   }
   .navbar-toggler {

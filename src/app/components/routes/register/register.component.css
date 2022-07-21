@@ -18,7 +18,7 @@ h1 {
   font-weight: 600;
   font-size: 64px;
   line-height: 80px;
-  color: #C3C8D4;
+  color: #c3c8d4;
   margin: 40px 0px;
 }
 
@@ -66,9 +66,9 @@ h1 {
   align-items: center;
   padding: 16px 32px;
   width: 486px;
-  background: #7B6EF6;
+  background: #7b6ef6;
   border-radius: 12px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px;
 }
 
@@ -85,7 +85,7 @@ h1 {
 }
 
 h2 {
-  color: #C3C8D4;
+  color: #c3c8d4;
 }
 
 .google {
@@ -94,9 +94,33 @@ h2 {
 }
 
 h6 {
-  color: #A8AEBF;
+  color: #a8aebf;
 }
 
 h6 a {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .img {
+    display: none;
+  }
+  .login {
+    padding-left: 40%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mail,
+  .pass {
+    width: 200px;
+  }
+
+  .input-email,
+  .input-pass,
+  .btn {
+    width: 350px;
+  }
+  .rectangle {
+    width: 100px;
+  }
 }

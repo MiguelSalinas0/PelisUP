@@ -1,4 +1,4 @@
-<div class="portadas container d-flex">
+<div class="portadas container d-flex pt-5">
     <div *ngFor="let prog of movies">
         <a [routerLink]="['../Vistas', prog.id, prog.media_type]"><app-card *ngIf="'movie' == prog.media_type" [name]="prog.title" [image]="prog.poster_path" [rating]="prog.vote_average"></app-card></a>
         <a [routerLink]="['../Vistas', prog.id, prog.media_type]"><app-card *ngIf="'tv' == prog.media_type" [name]="prog.name" [image]="prog.poster_path" [rating]="prog.vote_average"></app-card></a>

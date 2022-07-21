@@ -88,8 +88,12 @@ h2 {
   border: none;
 }
 
-.contenedor-google{
+.contenedor-google {
   justify-content: space-around;
+}
+
+.btn-google {
+  justify-content: center;
 }
 
 h6 {
@@ -111,7 +115,7 @@ h6 a {
   }
   .mail,
   .pass {
-    width: 200px;
+    width: 250px;
   }
 
   .input-email,
@@ -120,7 +124,10 @@ h6 a {
   .contenedor-google {
     width: 350px;
   }
-  .rectangle{
+  .rectangle {
     width: 100px;
+  }
+  .btn-google {
+    justify-content: start;
   }
 }
