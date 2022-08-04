@@ -5,9 +5,12 @@
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
+      <label for="checkbox" class="hamburger">
+        <input type="checkbox" id="checkbox">
+        <span class="line line--top"></span>
+        <span class="line line--middle"></span>
+        <span class="line line--bottom"></span>
+      </label>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="userLogged | async as user; else logout">

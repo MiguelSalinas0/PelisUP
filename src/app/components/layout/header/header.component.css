@@ -41,7 +41,6 @@
   width: 35px;
   height: 2px;
   background-color: #f8ecd1;
-  margin-block: 10px;
   border-radius: 4px;
   transition: transform 0.5s, opacity 0.25s;
 }
@@ -53,6 +52,38 @@
 
 .navbar-collapse ul {
   padding-left: 70%;
+}
+
+#checkbox {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.line--top {
+  transform: translateY(-7px);
+}
+
+.line--bottom {
+  transform: translateY(7px);
+}
+
+#checkbox:checked ~ .line--top {
+  transform: rotate(45deg);
+}
+
+#checkbox:checked ~ .line--middle {
+  transform: translateX(16px);
+  opacity: 0;
+}
+
+#checkbox:checked ~ .line--bottom {
+  transform: rotate(-45deg);
 }
 
 @media only screen and (max-width: 900px) {
