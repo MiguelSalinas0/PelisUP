@@ -1,9 +1,11 @@
 <div *ngIf="media == 'movie'">
-  <div class="portada container pt-3">
-    <img src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}" alt="portada" />
-  </div>
-  <div class="titulo">
-    <h1>{{ movie.title }}</h1>
+  <div class="contenedor-titulo">
+    <div class="portada container pt-3">
+      <img src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}" alt="portada" />
+    </div>
+    <div class="titulo">
+      <h1>{{ movie.title }}</h1>
+    </div>
   </div>
   <div class="container seccion-data d-flex justify-content-around">
     <div class="poster col-sm-5">
@@ -15,7 +17,7 @@
       <h4>Detalles</h4>
       <p class="pt-1">{{ movie.overview }}</p>
       <p class="puntuacion">
-        <img src="assets/Vector.png" alt="" />{{ movie.vote_average }}
+        <img src="assets/Vector.png" alt="" />{{ puntuacion(movie.vote_average) }}
       </p>
       <h4>Fecha de estreno</h4>
       <p class="pt-1">{{ movie.release_date }}</p>
@@ -33,11 +35,13 @@
 </div>
 
 <div *ngIf="media == 'tv'">
-  <div class="portada container pt-3">
-    <img src="https://image.tmdb.org/t/p/original/{{ serie.backdrop_path }}" alt="portada" />
-  </div>
-  <div class="titulo">
-    <h1>{{ serie.name }}</h1>
+  <div class="contenedor-titulo">
+    <div class="portada container pt-3">
+      <img src="https://image.tmdb.org/t/p/original/{{ serie.backdrop_path }}" alt="portada" />
+    </div>
+    <div class="titulo">
+      <h1>{{ serie.name }}</h1>
+    </div>
   </div>
   <div class="container seccion-data d-flex justify-content-around">
     <div class="poster col-sm-5">
@@ -49,7 +53,7 @@
       <h4>Detalles</h4>
       <p class="pt-1">{{ serie.overview }}</p>
       <p class="puntuacion">
-        <img src="assets/Vector.png" alt="" />{{ serie.vote_average }}
+        <img src="assets/Vector.png" alt="" />{{ puntuacion(serie.vote_average) }}
       </p>
       <h4>Primer episodio</h4>
       <p class="pt-1">{{ serie.first_air_date }}</p>

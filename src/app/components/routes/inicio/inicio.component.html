@@ -15,11 +15,11 @@
 
 <section class="section-menu">
   <div class="opciones d-flex justify-content-between">
-    <button class="btn text-white" (click)="filter = 'todos'"
-      [ngClass]="filter == 'todos' ? 'active' : '' ">Todos</button>
-    <button class="btn text-white" (click)="filter = 'movie'"
+    <button class="btn text-white justify-content-center" (click)="filter = 'todos'"
+      [ngClass]="filter == 'todos' || filter == '' ? 'active' : '' ">Todos</button>
+    <button class="btn text-white  justify-content-center" (click)="filter = 'movie'"
       [ngClass]="filter == 'movie' ? 'active' : '' ">Películas</button>
-    <button class="btn text-white" (click)="filter = 'tv'" [ngClass]="filter == 'tv' ? 'active' : '' ">Series</button>
+    <button class="btn text-white  justify-content-center" (click)="filter = 'tv'" [ngClass]="filter == 'tv' ? 'active' : '' ">Series</button>
   </div>
 </section>
 

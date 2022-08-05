@@ -104,15 +104,10 @@ input[type="search"] {
 }
 
 .opciones button {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  position: static;
   width: 115px;
   height: 40px;
   top: 8px;
   border-radius: 8px;
-  justify-content: center;
 }
 
 .opciones button:hover {

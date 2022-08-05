@@ -53,4 +53,8 @@ export class VistasComponent implements OnInit {
       },
     });
   }
+
+  puntuacion(v: number){
+    return v.toFixed(1)
+  }
 }

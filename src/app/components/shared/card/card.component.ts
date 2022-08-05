@@ -10,7 +10,12 @@ export class CardComponent implements OnInit {
   @Input() image!: string;
   @Input() rating!: number;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
+  puntuacion(v: number) {
+    return v.toFixed(1)
+  }
+
 }
