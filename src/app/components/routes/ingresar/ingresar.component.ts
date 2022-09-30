@@ -16,9 +16,12 @@ export class IngresarComponent implements OnInit {
     password: [, [Validators.required, Validators.minLength(6)]],
   });
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {}
+  imagen: string = 'eye.png';
+  type: string = 'password';
 
-  ngOnInit(): void {}
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
+
+  ngOnInit(): void { }
 
   campoEsValido(campo: string) {
     return (
@@ -27,12 +30,12 @@ export class IngresarComponent implements OnInit {
     );
   }
 
-  Ingresar(){
-    if(this.miFormulario.invalid)
+  Ingresar() {
+    if (this.miFormulario.invalid)
       return
     const { email, password } = this.miFormulario.controls;
     this.authService.login(email.value, password.value).then(response => {
-      if(!response)
+      if (!response)
         return
       localStorage.setItem('usuario', JSON.stringify(response.user))
       console.log("Se registro: ", response)
@@ -40,13 +43,23 @@ export class IngresarComponent implements OnInit {
     })
   }
 
-  IngresarConGoogle(){
+  IngresarConGoogle() {
     this.authService.loginWithGoogle().then(response => {
-      if(!response)
+      if (!response)
         return
       localStorage.setItem('usuario', JSON.stringify(response.user))
       console.log("Se registro: ", response)
       this.router.navigate(['/home'])
     })
+  }
+
+  cambiarVisibilidad() {
+    if (this.imagen == 'eye.png') {
+      this.imagen = 'eye-slash.png';
+      this.type = 'text';
+    } else {
+      this.imagen = 'eye.png';
+      this.type = 'password';
+    }
   }
 }

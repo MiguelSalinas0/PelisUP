@@ -25,7 +25,7 @@ h1 {
   background-color: transparent;
   border: none;
   outline: none;
-  width: 370px;
+  width: 330px;
   height: 30px;
   font-family: "Poppins";
   font-style: normal;
@@ -33,6 +33,11 @@ h1 {
   font-size: 15px;
   line-height: 16px;
   color: #475069;
+}
+
+.mail:focus,
+.pass:focus {
+  box-shadow: none;
 }
 
 .input-email,
@@ -53,6 +58,10 @@ h1 {
   width: 24px;
   height: 24px;
   margin: 0px 16px;
+}
+
+.ojo {
+  cursor: pointer;
 }
 
 .btn {
@@ -121,6 +130,10 @@ h6 a {
   .btn,
   .contenedor-google {
     width: 350px;
+  }
+  .input-email img,
+  .input-pass img {
+    margin: 0px 0px;
   }
   .rectangle {
     width: 100px;

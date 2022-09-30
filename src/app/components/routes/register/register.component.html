@@ -17,8 +17,9 @@
       <div class="pt-4">
         <div class="input-pass">
           <img src="assets/Left Icon pass.png" alt="" />
-          <input class="pass form-control" type="password" name="password" placeholder="Contraseña"
+          <input class="pass form-control" type={{type}} name="password" placeholder="Contraseña"
             formControlName="password" />
+          <img class="ojo" (click)="cambiarVisibilidad()" src="assets/{{imagen}}" alt="" />
           <span class="form-text text-danger" *ngIf="campoEsValido('password')">
             Mínimo 6 caracteres
           </span>

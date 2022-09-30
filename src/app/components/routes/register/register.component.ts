@@ -16,9 +16,12 @@ export class RegisterComponent implements OnInit {
     password: [, [Validators.required, Validators.minLength(6)]],
   });
 
+  imagen: string = 'eye.png';
+  type: string = 'password';
+
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   campoEsValido(campo: string) {
     return (
@@ -27,16 +30,26 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-  Registrar(){
-    if(this.miFormulario.invalid)
+  Registrar() {
+    if (this.miFormulario.invalid)
       return
     const { email, password } = this.miFormulario.controls;
     this.authService.register(email.value, password.value).then(response => {
-      if(!response)
+      if (!response)
         return
       console.log("Se creo cuenta: ", response)
-      this.router.navigate(['/Ingresar'])
+      this.router.navigate(['/home'])
     })
+  }
+
+  cambiarVisibilidad() {
+    if (this.imagen == 'eye.png') {
+      this.imagen = 'eye-slash.png';
+      this.type = 'text';
+    } else {
+      this.imagen = 'eye.png';
+      this.type = 'password';
+    }
   }
 
 }
